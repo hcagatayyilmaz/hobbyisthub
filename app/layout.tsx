@@ -1,4 +1,5 @@
 import "./globals.css"
+import Announcement from "./components/Announcement"
 
 export const metadata = {
   title: "Create Next App",
@@ -12,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="mx-auto max-w-screen-xl">{children}</body>
+      <body>
+        <Announcement />
+        {children}
+      </body>
     </html>
   )
 }
