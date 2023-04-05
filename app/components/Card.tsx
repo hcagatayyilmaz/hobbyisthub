@@ -8,7 +8,7 @@ type Post = {
 
 const Card: React.FC<Post> = ({ title, image }) => {
   return (
-    <div className="flex flex-col gap-4 items-center bg-slate-200 rounded-xl p-2">
+    <div className="flex flex-col gap-4 items-center bg-slate-200 rounded-xl p-1 pb-4">
       <Image src={image} alt={title} height={300} className="rounded-xl" />
       <h2 className="text-black text-lg">{title}</h2>
     </div>
