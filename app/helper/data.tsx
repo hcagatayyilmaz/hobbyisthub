@@ -1,4 +1,4 @@
-import PostBanner from "./image.jpg";
+import PostBanner from "./image.png";
 
 const Posts = [
   {

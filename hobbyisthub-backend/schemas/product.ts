@@ -9,9 +9,19 @@ export default {
       type: 'string',
     },
     {
+      title: 'image',
       name: 'image',
-      title: 'Image',
       type: 'image',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alt',
+        },
+      ],
     },
     {
       name: 'price',
@@ -19,9 +29,9 @@ export default {
       type: 'number',
     },
     {
-      name: 'description',
-      title: 'Description',
-      type: 'text',
+      title: 'Amazon URL',
+      name: 'url',
+      type: 'url',
     },
   ],
 }

@@ -1,19 +1,17 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
-import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Gallery from "./components/Gallery";
-import Footer from "./components/Footer";
+import { getPosts } from "../hobbyisthub-backend/sanity-utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default async function Home() {
+  const posts = await getPosts();
+  console.log(posts);
   return (
     <main className="mx-auto max-w-screen-xl">
-      <Navbar />
       <Banner />
       <Gallery />
-      <Footer />
     </main>
   );
 }
