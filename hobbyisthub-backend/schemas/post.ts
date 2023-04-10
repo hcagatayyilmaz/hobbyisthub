@@ -25,18 +25,23 @@ export default {
       type: 'image',
     },
     {
+      name: 'description',
+      title: 'Description',
+      type: 'string',
+    },
+    {
       name: 'content',
       title: 'Content',
       type: 'array',
       of: [
         {
           type: 'object',
-          title: 'Content Block',
-          name: 'contentBlock',
+          title: 'Section',
+          name: 'section',
           fields: [
             {
-              name: 'blockContent',
-              title: 'Text Content',
+              name: 'details',
+              title: 'Details',
               type: 'blockContent',
             },
             {

@@ -8,9 +8,7 @@ export default defineConfig({
   title: 'hobbyisthub-backend',
   projectId: 'd7lyxbp2',
   dataset: 'production',
-
   plugins: [deskTool(), visionTool()],
-
   schema: {
     types: schemaTypes,
   },

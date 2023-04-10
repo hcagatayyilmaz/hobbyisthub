@@ -12,7 +12,30 @@ export async function getPosts() {
       _id,
       _createdAt,
       title,
-      url
+      "image":image.asset->url,
+      "slug":slug.current
     }`
+  )
+}
+
+export async function getPost(slug: string) {
+  return client.fetch(
+    groq`*[_type == "post" && slug.current == $slug][0]{
+      _id,
+      _createdAt,
+      title,
+      description,
+      content[]{
+        details,
+        products[]->{
+          title,
+          "image":image.asset->url,
+          price,
+          url,
+          description
+        }
+      }
+    }`,
+    {slug}
   )
 }

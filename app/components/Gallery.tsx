@@ -1,12 +1,17 @@
 import React from "react";
-import Posts from "../helper/data";
 import Card from "./Card";
+import Link from "next/link";
+import { Post } from "../types/Post";
 
-function Gallery() {
+function Gallery({ posts }: any) {
   return (
-    <div className="mx-auto lg:grid lg:grid-cols-3 gap-4 pt-4">
-      {Posts.map((post) => (
-        <Card title={post.title} image={post.image_url} />
+    <div className=" mx-auto grid grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
+      {posts.map((post: Post) => (
+        <div key={post._id}>
+          <Link href={`/hobbies/${post.slug}`}>
+            <Card title={post.title} image={post.image} />
+          </Link>
+        </div>
       ))}
     </div>
   );
