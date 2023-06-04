@@ -1,6 +1,6 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Product } from "../types/Product";
+import Link from 'next/link'
+import Image from 'next/image'
+import { Product } from '../types/Product'
 
 export default function ProductCard({
   image,
@@ -10,19 +10,21 @@ export default function ProductCard({
   description,
 }: Product) {
   return (
-    <div className="flex flex-col  items-center gap-2 border-2 border-black rounded p-4">
-      <h1 className="text-2xl font-bold">{title}</h1>
+    <div className="flex flex-col justify-between items-center gap-2 border-2 border-black rounded ">
+      <div>
+        <h1 className="text-2xl font-bold p-4">{title}</h1>
 
-      <div className="w-full h-[120px] relative">
-        <Image
-          src={image}
-          alt={`${title}`}
-          fill
-          className="object-cover"
-        ></Image>
+        <div className="w-full h-[200px] relative">
+          <Image
+            src={image}
+            alt={`${title}`}
+            fill
+            style={{ objectFit: 'contain' }}
+          ></Image>
+        </div>
+        <p className="mt-2 px-4">{description}</p>
       </div>
 
-      <p>{description}</p>
       <Link
         href={url}
         target="_blank"
@@ -31,5 +33,5 @@ export default function ProductCard({
         Get on Amazon {`$${price}`}
       </Link>
     </div>
-  );
+  )
 }

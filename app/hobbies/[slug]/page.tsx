@@ -1,13 +1,13 @@
-import { PortableText } from "@portabletext/react";
-import { getPost } from "../../../hobbyisthub-backend/sanity-utils";
-import ProductCard from "../../components/ProductCard";
-import { Product } from "../../types/Product";
+import { PortableText } from '@portabletext/react'
+import { getPost } from '../../../hobbyisthub-backend/sanity-utils'
+import ProductCard from '../../components/ProductCard'
+import { Product } from '../../types/Product'
 
 export default async function Post({ params }: any) {
-  const post = await getPost(params.slug);
-  //console.log(post);
+  const post = await getPost(params.slug)
+  console.log(post)
   return (
-    <div className="mx-auto max-w-screen-xl p-4 bg-slate-100 rounded text-black text-justify">
+    <div className="mx-auto max-w-screen-xl p-4 bg-white rounded text-black text-justify">
       <div className="mx-auto p-8 md:px-24 flex flex-col gap-4">
         <h1 className="text-2xl text-center">{post.title}</h1>
         <p>{post.description}</p>
@@ -31,5 +31,5 @@ export default async function Post({ params }: any) {
         </div>
       </div>
     </div>
-  );
+  )
 }

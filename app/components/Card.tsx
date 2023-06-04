@@ -1,10 +1,10 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react'
+import Image from 'next/image'
 
 type Post = {
-  title: string;
-  image: any;
-};
+  title: string
+  image: any
+}
 
 const Card: React.FC<Post> = ({ title, image }) => {
   return (
@@ -18,7 +18,7 @@ const Card: React.FC<Post> = ({ title, image }) => {
       />
       <h2 className="text-black text-md text-center px-4 py-1">{title}</h2>
     </div>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card

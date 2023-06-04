@@ -38,5 +38,17 @@ export default {
       name: 'description',
       type: 'string',
     },
+    {
+      title: 'Taxonomy',
+      name: 'taxonomy',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Beginner ', value: 'beginner'},
+          {title: 'Price-performance', value: 'price-performance'},
+          {title: 'Advanced', value: 'advanced'},
+        ],
+      },
+    },
   ],
 }

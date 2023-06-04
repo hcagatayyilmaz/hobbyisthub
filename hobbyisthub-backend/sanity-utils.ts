@@ -4,6 +4,7 @@ const client = createClient({
   projectId: 'd7lyxbp2',
   dataset: 'production',
   apiVersion: '2023-04-08',
+  useCdn: true,
 })
 
 export async function getPosts() {
