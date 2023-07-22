@@ -8,13 +8,12 @@ export default function ProductCard({
   price,
   url,
   description,
+  color,
 }: Product) {
   return (
-    <div className="flex flex-col justify-between items-center gap-2 border-2 border-black rounded ">
-      <div>
-        <h1 className="text-2xl font-bold p-4">{title}</h1>
-
-        <div className="w-full h-[200px] relative">
+    <div className="flex flex-col max-w-screen-md justify-between items-center gap-2 border-2  border-orange-600	 rounded text-xs md:text-base">
+      <div className="flex gap-2">
+        <div className="w-full md:h-[200px] m-2 relative top-2 ">
           <Image
             src={image}
             alt={`${title}`}
@@ -22,13 +21,16 @@ export default function ProductCard({
             style={{ objectFit: 'contain' }}
           ></Image>
         </div>
-        <p className="mt-2 px-4">{description}</p>
+        <div>
+          <h1 className="text-xl font-bold p-4">{title}</h1>
+          <p className="mt-2 px-4 text-sm">{description}</p>
+        </div>
       </div>
 
       <Link
         href={url}
         target="_blank"
-        className="bg-black text-white w-full p-4 text-center "
+        className={`text-white w-full p-3 text-center bg-orange-600`}
       >
         Get on Amazon {`$${price}`}
       </Link>

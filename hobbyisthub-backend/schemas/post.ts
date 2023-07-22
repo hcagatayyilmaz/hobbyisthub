@@ -55,6 +55,11 @@ export default {
         },
       ],
     },
+    {
+      name: 'outro',
+      title: 'Outro',
+      type: 'string',
+    },
   ],
 }
 console.log(blockContent.name)

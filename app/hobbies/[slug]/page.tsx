@@ -5,17 +5,18 @@ import { Product } from '../../types/Product'
 
 export default async function Post({ params }: any) {
   const post = await getPost(params.slug)
-  console.log(post)
+  console.log(post.content[0].products)
+
   return (
-    <div className="mx-auto max-w-screen-xl p-4 bg-white rounded text-black text-justify">
-      <div className="mx-auto p-8 md:px-24 flex flex-col gap-4">
+    <div className="mx-auto max-w-screen-lg p-4 bg-white rounded text-black text-justify">
+      <div className="mx-auto p-8 md:px-36 flex flex-col gap-4">
         <h1 className="text-2xl text-center">{post.title}</h1>
         <p>{post.description}</p>
         <div>
           {post.content.map((section: any) => (
             <div className="my-4">
               <PortableText value={section.details} />
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-2 justify-between mt-4">
+              <div className="flex flex-col gap-2 justify-between mt-4">
                 {section.products.map((product: Product) => (
                   <ProductCard
                     title={product.title}
@@ -23,12 +24,14 @@ export default async function Post({ params }: any) {
                     url={product.url}
                     image={product.image}
                     description={product.description}
+                    color={product.color}
                   />
                 ))}
               </div>
             </div>
           ))}
         </div>
+        {post.outro && <p>{post.outro}</p>}
       </div>
     </div>
   )

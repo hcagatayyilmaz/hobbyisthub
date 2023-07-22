@@ -39,6 +39,11 @@ export default {
       type: 'string',
     },
     {
+      title: 'Color',
+      name: 'color',
+      type: 'string',
+    },
+    {
       title: 'Taxonomy',
       name: 'taxonomy',
       type: 'string',
@@ -51,4 +56,7 @@ export default {
       },
     },
   ],
+  initialValue: {
+    color: 'black',
+  },
 }

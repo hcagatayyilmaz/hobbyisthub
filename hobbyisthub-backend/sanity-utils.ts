@@ -26,6 +26,7 @@ export async function getPost(slug: string) {
       _createdAt,
       title,
       description,
+      outro,
       content[]{
         details,
         products[]->{
@@ -33,7 +34,8 @@ export async function getPost(slug: string) {
           "image":image.asset->url,
           price,
           url,
-          description
+          description,
+          color
         }
       }
     }`,
