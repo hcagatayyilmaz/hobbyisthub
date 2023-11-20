@@ -25,6 +25,7 @@ export default async function Post({params}: any) {
                     image={product.image}
                     description={product.description}
                     color={product.color}
+                    key={product.title}
                   />
                 ))}
               </div>
