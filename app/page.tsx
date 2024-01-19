@@ -9,7 +9,7 @@ async function getData() {
 
   return res
 }
-
+//test
 export default async function Home() {
   const posts = await getData()
   return (
