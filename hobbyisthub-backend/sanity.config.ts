@@ -6,9 +6,9 @@ import {schemaTypes} from './schemas'
 export default defineConfig({
   name: 'default',
   title: 'hobbyisthub-backend',
-  projectId: process.env.SANITY_PROJECT_ID as string,
+  projectId: 'd7lyxbp2',
   dataset: 'production',
-  plugins: [deskTool(),],
+  plugins: [deskTool()],
   schema: {
     types: schemaTypes,
   },
