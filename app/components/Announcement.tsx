@@ -4,7 +4,7 @@ function Announcements() {
       <p className='text-center text-sm font-medium'>
         Join our vibrant community of hobby enthusiasts on
         <a
-          href='https://discord.gg/6JbsMZf5'
+          href='https://discord.gg/b5kakq3z'
           target='_blank'
           className='inline-block underline ml-1'
         >
