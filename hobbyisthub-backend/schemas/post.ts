@@ -27,7 +27,7 @@ export default {
     {
       name: 'description',
       title: 'Description',
-      type: 'string',
+      type: 'blockContent',
     },
     {
       name: 'content',
@@ -58,8 +58,7 @@ export default {
     {
       name: 'outro',
       title: 'Outro',
-      type: 'string',
+      type: 'blockContent',
     },
   ],
 }
-console.log(blockContent.name)

@@ -11,9 +11,9 @@ export default function ProductCard({
   color
 }: Product) {
   return (
-    <div className='flex flex-col max-w-screen-md justify-between items-center gap-2 border-2  border-orange-600	 rounded text-xs md:text-base'>
-      <div className='flex flex-col md:flex-row gap-2'>
-        <div className='w-full h-[250px] m-2 relative top-2'>
+    <div className='flex w-full flex-col max-w-screen-md justify-between items-center gap-2 border-2  border-orange-600	 rounded text-xs md:text-base'>
+      <div className='flex flex-col md:flex-row w-full gap-2'>
+        <div className='w-full h-[200px] md:w-1/2 m-2 relative top-2'>
           <Image
             src={image}
             alt={`${title}`}
@@ -21,7 +21,7 @@ export default function ProductCard({
             style={{objectFit: "contain"}}
           ></Image>
         </div>
-        <div>
+        <div className='w-full md:w-1/2'>
           <h1 className='text-xl font-bold p-2'>{title}</h1>
           <p className='mt-2 px-2 text-sm'>{description}</p>
         </div>

@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 
 export const metadata = {
-  title: "Hobbyist Up",
+  title: "Hobbyist Up!",
   description: "Starting point for your next hobby journey!"
 }
 
