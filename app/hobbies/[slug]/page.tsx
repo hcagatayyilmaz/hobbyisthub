@@ -14,7 +14,9 @@ export default async function Post({params}: any) {
     <div className='mx-auto max-w-screen-lg p-4 bg-white rounded text-black text-justify'>
       <div className='mx-auto p-8 md:px-36 flex flex-col gap-4'>
         {/* Display the post title */}
-        <h1 className='text-2xl text-center'>{post.title}</h1>
+        <h1 className='text-3xl md:text-4xl text-center font-bold	'>
+          {post.title}
+        </h1>
 
         {/* Display the post description */}
         <PortableText value={post.description} />

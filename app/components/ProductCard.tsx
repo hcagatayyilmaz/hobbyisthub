@@ -22,7 +22,7 @@ export default function ProductCard({
           ></Image>
         </div>
         <div className='w-full md:w-1/2'>
-          <h1 className='text-xl font-bold p-2'>{title}</h1>
+          <h2 className='text-xl md:text-2xl font-bold p-2'>{title}</h2>
           <p className='mt-2 px-2 text-sm'>{description}</p>
         </div>
       </div>
