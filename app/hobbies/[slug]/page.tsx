@@ -24,11 +24,11 @@ export default async function Post({params}: any) {
         <div>
           {/* Iterate over each section of the post */}
           {post.content.map((section: any) => (
-            <div className='my-4' key={post.id}>
+            <div className='my-8' key={post.id}>
               {/* Display the section details */}
               <PortableText value={section.details} />
 
-              <div className='flex flex-col gap-2 justify-between mt-4'>
+              <div className='flex flex-col gap-4 justify-between mt-4'>
                 {/* Iterate over each product in the section */}
                 {section.products.map((product: Product) => (
                   <ProductCard
