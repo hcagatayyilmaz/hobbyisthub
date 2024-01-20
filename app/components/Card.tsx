@@ -8,10 +8,7 @@ type Post = {
 
 const Card: React.FC<Post> = ({title, image}) => {
   return (
-    <div
-      className='flex h-full justify-between flex-col gap-4 items-center bg-slate-200 rounded-xl p-1 pb-4 border border-solid'
-      style={{borderColor: "#FF8080"}}
-    >
+    <div className='flex h-full justify-between flex-col gap-4 items-center bg-slate-200 rounded-xl p-1 pb-4 '>
       <div className='h-[200px] md:h-[200px] w-full relative'>
         <Image src={image} alt={title} fill className='rounded-xl' />
       </div>
