@@ -12,7 +12,7 @@ const Card: React.FC<Post> = ({title, image}) => {
       <div className='h-[200px] md:h-[200px] w-full relative'>
         <Image src={image} alt={title} fill className='rounded-xl' />
       </div>
-      <h2 className='text-black text-md text-center px-4 py-1'>{title}</h2>
+      <h1 className='text-black text-xl text-center px-4 py-1'>{title}</h1>
     </div>
   )
 }
