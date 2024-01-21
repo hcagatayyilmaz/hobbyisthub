@@ -3,6 +3,8 @@ import Card from "./Card"
 import Link from "next/link"
 import {Post} from "../types/Post"
 
+export const revalidate = 30
+
 function Gallery({posts}: any) {
   return (
     <div className=' mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4'>
