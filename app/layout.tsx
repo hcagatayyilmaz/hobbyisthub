@@ -16,7 +16,9 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         <Announcement />
         <Navbar />
         {children}
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY} />
+        <GoogleAnalytics
+          gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY || ""}
+        />
         <Footer />
       </body>
     </html>
