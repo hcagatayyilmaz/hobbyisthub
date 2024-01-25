@@ -2,6 +2,7 @@ import "./globals.css"
 import Announcement from "./components/Announcement"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import {GoogleAnalytics} from "@next/third-parties/google"
 
 export const metadata = {
   title: "Hobbyist Up!",
@@ -15,6 +16,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         <Announcement />
         <Navbar />
         {children}
+        <GoogleAnalytics gaId='G-MRS3GH150K' />
         <Footer />
       </body>
     </html>
