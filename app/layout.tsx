@@ -3,6 +3,7 @@ import Announcement from "./components/Announcement"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import {GoogleAnalytics} from "@next/third-parties/google"
+import {Analytics} from "@vercel/analytics/react"
 
 export const metadata = {
   title: "Hobbyist Up!",
@@ -19,6 +20,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         <GoogleAnalytics
           gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY || ""}
         />
+        <Analytics />
         <Footer />
       </body>
     </html>
