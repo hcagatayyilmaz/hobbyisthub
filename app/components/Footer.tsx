@@ -18,7 +18,7 @@ function Footer() {
       </div>
       <div className='flex text-2xl gap-4'>
         <Link
-          href={"https://discord.gg/b5kakq3z"}
+          href={"https://discord.gg/TWcvuS46GF"}
           rel='noopener noreferrer'
           target='_blank'
           className='hover:animate-bounce'
